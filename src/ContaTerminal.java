@@ -32,7 +32,7 @@ public class ContaTerminal {
         String agencia = numeroAgencia + "-" + digitoVerificador;
 
         System.out.println("Digite sem nome e sobrenome:");
-        String nomeCliente = scanner.next();
+        String nomeCliente = scanner.nextLine();
             
         scanner.close();
 
