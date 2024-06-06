@@ -10,7 +10,7 @@ public class ContaTerminal {
 
         int numeroConta = Integer.valueOf(args[0]);
         string numeroAgencia = args[1];
-        char digitoVerificador = args[2].charAt(0);
+        string digitoVerificador = args[2];
         string agencia = numeroAgencia + "-" + digitoVerificador;
         string nomeCliente = args[3];
         double saldoBancario = Double.valueOf(args[4]);
