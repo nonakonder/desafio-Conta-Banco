@@ -17,7 +17,9 @@ public class ContaTerminal {
         //String agencia = numeroAgencia + "-" + digitoVerificador;
        //String nomeCliente = args[3];
        // double saldoBancario = Double.valueOf(args[4]);
-//-----------------------------------------------------------       
+//-----------------------------------------------------------   
+        double saldoBancario = 58.87;
+        String msgSaque;
         Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
 
         System.out.println("Digite o número da sua Conta:");
@@ -29,12 +31,24 @@ public class ContaTerminal {
         char digitoVerificador = valor.charAt(valor.length() - 1);
         String agencia = numeroAgencia + "-" + digitoVerificador;
 
+        scanner.nextLine();
+
         System.out.println("Digite sem nome e sobrenome:");
         String nomeCliente = scanner.nextLine();
-            
-        double saldoBancario = 58.87;
+        
+        System.out.println("Digite o valor que deseja retirar:");
+        double valorDesejado = scanner.nextDouble();
 
-        System.out.println("Olá "+ nomeCliente + ", obrigado por criar uma conta em nosso banco, sua agência é " + agencia + ", conta " + numeroConta + " e seu saldo de " + saldoBancario + " já está disponível para saque");
+        if ( valorDesejado >= saldoBancario ) {
+
+            msgSaque = "já está disponível para saque";
+
+        } else {
+            
+            msgSaque = "não está disponível para saque";
+        }
+
+        System.out.println("Olá "+ nomeCliente + ", obrigado por criar uma conta em nosso banco, sua agência é " + agencia + ", conta " + numeroConta + " /n" + "Seu saldo é de " + saldoBancario + " e o valor de " + valorDesejado+ msgSaque);
 
         scanner.close();
 
