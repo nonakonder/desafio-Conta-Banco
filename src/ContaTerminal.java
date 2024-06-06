@@ -33,22 +33,22 @@ public class ContaTerminal {
 
         scanner.nextLine();
 
-        System.out.println("Digite sem nome e sobrenome:");
+        System.out.println("Digite seu nome e sobrenome:");
         String nomeCliente = scanner.nextLine();
         
         System.out.println("Digite o valor que deseja retirar:");
         double valorDesejado = scanner.nextDouble();
 
-        if ( valorDesejado >= saldoBancario ) {
+        if ( valorDesejado <= saldoBancario ) {
 
-            msgSaque = "já está disponível para saque";
+            msgSaque = " já está disponível para saque.";
 
         } else {
             
-            msgSaque = "não está disponível para saque";
+            msgSaque = " não está disponível para saque.";
         }
 
-        System.out.println("Olá "+ nomeCliente + ", obrigado por criar uma conta em nosso banco, sua agência é " + agencia + ", conta " + numeroConta + " /n" + "Seu saldo é de " + saldoBancario + " e o valor de " + valorDesejado+ msgSaque);
+        System.out.println("Olá "+ nomeCliente + ", obrigado por criar uma conta em nosso banco, sua agência é " + agencia + "e o seu número da conta é " + numeroConta + ". "+ "Seu saldo é de " + saldoBancario + " e o valor de " + valorDesejado + msgSaque);
 
         scanner.close();
 
