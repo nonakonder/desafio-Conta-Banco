@@ -18,21 +18,22 @@ public class ContaTerminal {
        //String nomeCliente = args[3];
        // double saldoBancario = Double.valueOf(args[4]);
 //-----------------------------------------------------------
+        double saldoBancario = 58.87;
+        
         Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
 
         System.out.println("Digite o número da sua Conta:");
         int numeroConta = scanner.nextInt();
 
         System.out.println("Digite o número da sua agência:");
-        String agencia = scanner.next();
-        String numeroAgencia= agencia.substring(0, agencia.length() - 1);
-        char digitoVerificador = agencia.charAt(agencia.length() - 1);
+        String valor = scanner.next();
+        String numeroAgencia= valor.substring(0, valor.length() - 1);
+        char digitoVerificador = valor.charAt(valor.length() - 1);
+        String agencia = numeroAgencia + "-" + digitoVerificador;
 
         System.out.println("Digite sem nome e sobrenome:");
         String nomeCliente = scanner.next();
             
-        double saldoBancario = 58.87;
-
         scanner.close();
 
         System.out.println("Olá "+ nomeCliente + ", obrigado por criar uma conta em nosso banco, sua agência é " + agencia + ", conta " + numeroConta + " e seu saldo de " + saldoBancario + " já está disponível para saque");
