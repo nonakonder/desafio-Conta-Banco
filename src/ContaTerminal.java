@@ -17,9 +17,7 @@ public class ContaTerminal {
         //String agencia = numeroAgencia + "-" + digitoVerificador;
        //String nomeCliente = args[3];
        // double saldoBancario = Double.valueOf(args[4]);
-//-----------------------------------------------------------
-        double saldoBancario = 58.87;
-        
+//-----------------------------------------------------------       
         Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
 
         System.out.println("Digite o número da sua Conta:");
@@ -34,9 +32,11 @@ public class ContaTerminal {
         System.out.println("Digite sem nome e sobrenome:");
         String nomeCliente = scanner.nextLine();
             
-        scanner.close();
+        double saldoBancario = 58.87;
 
         System.out.println("Olá "+ nomeCliente + ", obrigado por criar uma conta em nosso banco, sua agência é " + agencia + ", conta " + numeroConta + " e seu saldo de " + saldoBancario + " já está disponível para saque");
+
+        scanner.close();
 
     }
 }
